@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+    rabbitmq:
+        # https://hub.docker.com/_/rabbitmq
+        image: rabbitmq:3.9.13-management-alpine
+        container_name: rabbitmq
+        ports:
+            - 5672:5672 # AMQP
+            - 15672:15672 # HTTP (Management)
+    elasticsearch:
+        # https://hub.docker.com/_/elasticsearch
+        image: elasticsearch:7.16.3
+        container_name: elasticsearch
+        ports:
+            - 9200:9200
+        environment:
+            - discovery.type=single-node
+            - xpack.security.enabled=true
+            - ELASTIC_PASSWORD=admin
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms256m -Xmx512m"
