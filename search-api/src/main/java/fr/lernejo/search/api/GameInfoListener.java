@@ -30,7 +30,6 @@ public class GameInfoListener {
         IndexRequest request = new IndexRequest("games");
         request.id(gameId);
         request.source(message, XContentType.JSON);
-
         try {
             this.restClient.index(request, RequestOptions.DEFAULT);
 
