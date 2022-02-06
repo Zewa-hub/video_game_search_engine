@@ -1,4 +1,4 @@
-# Template for the Video Game Search Engine project
+# The ultimate Video Game Search Engine
 
 [![build workflow](https://github.com/lernejo/video_game_search_engine_template/actions/workflows/build.yml/badge.svg)](https://github.com/lernejo/video_game_search_engine_template/actions)
 [![codecov](https://codecov.io/gh/lernejo/video_game_search_engine_template/branch/main/graph/badge.svg)](https://codecov.io/gh/lernejo/video_game_search_engine_template)
