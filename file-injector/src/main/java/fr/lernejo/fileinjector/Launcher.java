@@ -24,7 +24,7 @@ public class Launcher {
             RabbitTemplate rt = springContext.getBean(RabbitTemplate.class);
             rt.setMessageConverter(new Jackson2JsonMessageConverter());
             for (GameMap message : collection) {
-                rt.convertAndSend("", "game_infos", message, m -> {
+                rt.convertAndSend("", "game_info", message, m -> {
                     m.getMessageProperties().getHeaders().put("game_id", message.id);
                     return m;
                 });

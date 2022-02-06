@@ -19,7 +19,7 @@ import static fr.lernejo.search.api.AmqpConfiguration.GAME_INFO_QUEUE;
 
 @Component
 public class GameInfoListener {
-    final RestHighLevelClient restClient;
+    private final RestHighLevelClient restClient;
 
     public GameInfoListener(RestHighLevelClient restClient) {
         this.restClient = restClient;
@@ -32,7 +32,6 @@ public class GameInfoListener {
         request.source(message, XContentType.JSON);
         try {
             this.restClient.index(request, RequestOptions.DEFAULT);
-
         } catch (IOException e) {
             e.printStackTrace();
         }
