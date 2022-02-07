@@ -4,17 +4,17 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class GameMap {
-    public String id;
-    public String title;
-    public String game_url;
-    public String thumbnail;
-    public String short_description;
-    public String genre;
-    public String platform;
-    public String publisher;
-    public String developer;
-    public String release_date;
-    public String freetogame_profile_url;
+    final public String id;
+    final public String title;
+    final public String game_url;
+    final public String thumbnail;
+    final public String short_description;
+    final public String genre;
+    final public String platform;
+    final public String publisher;
+    final public String developer;
+    final public String release_date;
+    final public String freetogame_profile_url;
     
     @JsonCreator
     public GameMap (

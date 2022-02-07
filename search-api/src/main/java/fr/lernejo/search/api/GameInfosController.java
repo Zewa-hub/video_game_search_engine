@@ -39,5 +39,4 @@ public class GameInfosController {
             list.add(hit.getSourceAsMap());
         return list;
     }
-
 }
