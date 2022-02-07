@@ -20,10 +20,10 @@ class GameInfosControllerTest {
             .andExpect(MockMvcResultMatchers.status().isOk()));
     }
     @Test
-    void getGameInfoInvalidURI(@Autowired MockMvc mockMvc) throws Exception {
-            mockMvc
+    void getGameInfoInvalidURI(@Autowired MockMvc mockMvc) {
+            assertAll(() ->mockMvc
                 .perform(MockMvcRequestBuilders.get("/api/gamesToTO"))
-                .andExpect(MockMvcResultMatchers.status().isNotFound());
+                .andExpect(MockMvcResultMatchers.status().isNotFound()));
     }
 
 }
