@@ -8,5 +8,6 @@ class LauncherTest {
 
     @Test
     void main() {
+        Launcher.main(new String[]{});
     }
 }

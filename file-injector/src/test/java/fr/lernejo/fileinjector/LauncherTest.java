@@ -14,4 +14,8 @@ class LauncherTest {
             Duration.ofSeconds(20L),
             () -> Launcher.main(new String[]{"src/test/resources/games.json"}));
     }
+    @Test
+    void main_witout_arguments() {
+        assertThrows(Exception.class,() ->Launcher.main(new String[]{}));
+    }
 }
