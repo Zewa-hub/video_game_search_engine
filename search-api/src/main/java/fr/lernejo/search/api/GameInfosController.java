@@ -28,7 +28,7 @@ public class GameInfosController {
 
     @GetMapping("/api/games")
     public Iterable<Object> getMessage(@RequestParam(name = "query") String query) throws IOException {
-        SearchRequest request = new SearchRequest("games");
+        SearchRequest request = new SearchRequest();
         SearchSourceBuilder searchSourceBuilder = new SearchSourceBuilder();
         searchSourceBuilder.query(new QueryStringQueryBuilder(query));
         request.source(searchSourceBuilder);
